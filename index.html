@@ -283,7 +283,7 @@
                                 type="text"
                                 value={employeeId}
                                 onChange={(e) => setEmployeeId(e.target.value)}
-                                placeholder="例如: 1141208"
+                                placeholder="例如: A001"
                                 className="w-full pl-10 pr-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:bg-white focus:border-red-500 focus:outline-none transition-all duration-200 disabled:bg-gray-50 disabled:text-gray-500"
                                 disabled={status === 'loading' || isInitialLoading} // 載入中也鎖定輸入
                             />
@@ -341,14 +341,8 @@
                             <p className="text-gray-500 text-sm mb-1">已確認身份</p>
                             <p className="text-lg font-bold text-gray-800 break-words">{resultMsg}</p>
                         </div>
-
-                        <button
-                            onClick={handleReset}
-                            className="w-full bg-gray-800 hover:bg-black text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                        >
-                            <RefreshCcw className="w-4 h-4" />
-                            報到完成 Next
-                        </button>
+                        {/* 移除按鈕，保留畫面供檢查 */}
+                        <p className="text-xl font-bold text-gray-700 mt-4">請出示此畫面給工作人員確認</p>
                         </div>
                     )}
 
@@ -372,14 +366,8 @@
                             <span className="text-sm text-gray-500 font-normal mt-1 block">(無需重複報到)</span>
                             </p>
                         </div>
-
-                        <button
-                            onClick={handleReset}
-                            className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                        >
-                            <RefreshCcw className="w-4 h-4" />
-                            返回輸入 Back
-                        </button>
+                        {/* 移除按鈕，保留畫面供檢查 */}
+                        <p className="text-xl font-bold text-gray-700 mt-4">請出示此畫面給工作人員確認</p>
                         </div>
                     )}
 
@@ -440,4 +428,3 @@
     </script>
 </body>
 </html>
-
